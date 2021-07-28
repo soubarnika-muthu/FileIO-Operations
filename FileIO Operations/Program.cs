@@ -16,10 +16,12 @@ namespace FileIO_Operations
             //BinaryFileOperation operation = new BinaryFileOperation();
             ////operation.BinarySerialization();
             //operation.BinaryDeSerialization();
-            XmlFileOperation xml = new XmlFileOperation();
-            //xml.XMLSerialization();
-            xml.XMLDeserialization();
+            //XmlFileOperation xml = new XmlFileOperation();
+            ////xml.XMLSerialization();
+            //xml.XMLDeserialization();
 
+            JsonFileOperation jsonFile = new JsonFileOperation();
+            jsonFile.JSONSerialization();
             Console.Read();
         }
     }
