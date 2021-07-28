@@ -12,14 +12,9 @@ namespace FileIO_Operations
         static void Main(string[] args)
         {
             Console.WriteLine("Implementation of File IO operations");
-            string filepath = @"C:\Users\hp\source\repos\FileIO Operations\FileIO Operations\TextFile1.txt";
-            string outputFile = @"C:\Users\hp\Desktop\Output.txt";
-            BasicOperation.FileExists(filepath);
-            BasicOperation.ReadAllLine(filepath);
-            BasicOperation.ReadFile(filepath);
-           // BasicOperation.CopyFile(filepath,outputFile);
-            BasicOperation.ReadFromStreamReader(filepath);
-            BasicOperation.WriteUsingStreamWriter(filepath);
+
+            BinaryFileOperation operation = new BinaryFileOperation();
+            operation.BinarySerialization();
            
             Console.Read();
         }
