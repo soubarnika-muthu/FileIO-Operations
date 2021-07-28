@@ -25,5 +25,28 @@ namespace FileIO_Operations
                 Console.WriteLine(e.Message);
             }
         }
+        //converting the json file into object
+        public void JSONDeSerialization()
+        {
+            try
+            {
+                string path = @"C:\Users\hp\source\repos\FileIO Operations\FileIO Operations\JsonData.json";
+                string res = File.ReadAllText(path);
+                //deserialize the object and store it in the object
+                PersonData person = JsonConvert.DeserializeObject<PersonData>(res);
+                if (person != null)
+                {
+                    Console.WriteLine("Name:{0}  Age:{1}", person.name, person.age);
+                }
+                else
+                {
+                    Console.WriteLine("File is empty");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
