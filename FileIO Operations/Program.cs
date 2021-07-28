@@ -17,7 +17,8 @@ namespace FileIO_Operations
             ////operation.BinarySerialization();
             //operation.BinaryDeSerialization();
             XmlFileOperation xml = new XmlFileOperation();
-            xml.XMLSerialization();
+            //xml.XMLSerialization();
+            xml.XMLDeserialization();
 
             Console.Read();
         }

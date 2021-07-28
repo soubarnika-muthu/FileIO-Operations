@@ -24,5 +24,20 @@ namespace FileIO_Operations
             XmlSerializer serializer = new XmlSerializer(typeof(PersonData));
             serializer.Serialize(file, data);
         }
+        public void XMLDeserialization()
+        {
+            
+            string path = @"C:\Users\hp\source\repos\FileIO Operations\FileIO Operations\XmlFile.xml";
+            //creating the stream for the file to read
+            FileStream fs = File.OpenRead(path);
+            //xml object to perform deserialization
+            XmlSerializer xs = new XmlSerializer(typeof(PersonData));
+            //use xmlonject to deserialize dta from the file
+            PersonData data = (PersonData)xs.Deserialize(fs);
+            //display the deserialized data
+            Console.WriteLine("name: " + data.name);
+            Console.WriteLine("age: " + data.age);
+            Console.ReadKey();
+        }
     }
 }
