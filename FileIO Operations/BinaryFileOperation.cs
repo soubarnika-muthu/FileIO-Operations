@@ -26,5 +26,16 @@ namespace FileIO_Operations
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(file, data);
         }
+        public void BinaryDeSerialization()
+        {
+            string path = @"C:\Users\hp\source\repos\FileIO Operations\FileIO Operations\Binary.txt";
+            //creating the stream for the file to write
+            FileStream file = File.OpenRead(path);
+            BinaryFormatter binary = new BinaryFormatter();
+            //deserialize the binary format into object
+            PersonData person = (PersonData)binary.Deserialize(file);
+            Console.WriteLine("Person detail");
+            Console.WriteLine("Name:{0}  Age:{1}", person.name, person.age);
+        }
     }
 }

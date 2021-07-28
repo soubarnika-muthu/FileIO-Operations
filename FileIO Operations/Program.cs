@@ -14,8 +14,9 @@ namespace FileIO_Operations
             Console.WriteLine("Implementation of File IO operations");
 
             BinaryFileOperation operation = new BinaryFileOperation();
-            operation.BinarySerialization();
-           
+            //operation.BinarySerialization();
+            operation.BinaryDeSerialization();
+
             Console.Read();
         }
     }
