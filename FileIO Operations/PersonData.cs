@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FileIO_Operations
 {
     [Serializable]
-    class PersonData
+   public class PersonData
     {
         public string name { get; set; }
         public int age { get; set; }

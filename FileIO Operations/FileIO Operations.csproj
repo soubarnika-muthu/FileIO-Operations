@@ -48,6 +48,7 @@
     <Compile Include="PersonData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlFileOperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -55,6 +56,7 @@
   <ItemGroup>
     <Content Include="Binary.txt" />
     <Content Include="TextFile1.txt" />
+    <Content Include="XmlFile.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
