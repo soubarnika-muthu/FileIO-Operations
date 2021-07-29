@@ -7,9 +7,18 @@ using System.Threading.Tasks;
 namespace FileIO_Operations
 {
     [Serializable]
-   public class PersonData
+    public class PersonData
     {
         public string name { get; set; }
         public int age { get; set; }
+        public PersonData()
+        {
+
+        }
+        public PersonData(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
     }
 }

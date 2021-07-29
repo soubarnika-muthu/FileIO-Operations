@@ -22,7 +22,9 @@ namespace FileIO_Operations
 
             JsonFileOperation jsonFile = new JsonFileOperation();
             //jsonFile.JSONSerialization();
-            jsonFile.JSONDeSerialization();
+            //jsonFile.JSONDeSerialization();
+            CSVFileOperation csv = new CSVFileOperation();
+            csv.ReadInput();
             Console.Read();
         }
     }
